@@ -8,3 +8,13 @@
 .table-striped {
 
 }*/
+
+
+body {
+  background-image: url("pictures/LA-football-stadium-plan-gets-boost-9FE4O9S-x-large.jpg");
+}
+
+#image {
+  width:100%;
+  height: 155px;
+}
