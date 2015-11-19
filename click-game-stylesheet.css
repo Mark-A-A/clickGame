@@ -6,7 +6,7 @@
 
 
 body {
-  background-image: url("pictures/LA-football-stadium-plan-gets-boost-9FE4O9S-x-large.jpg");
+  /*background-image: url("pictures/LA-football-stadium-plan-gets-boost-9FE4O9S-x-large.jpg"); */
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -14,8 +14,15 @@ body {
 }
 
 h1 {
-  color: white;
+  color: -red;
   outline: black;
+  text-align: center;
+  font-size: 60px
+
+}
+
+.startButton {
+  text-align: center;
 }
 
 #image {

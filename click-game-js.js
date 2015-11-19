@@ -1,46 +1,56 @@
 
-var clickCount;
 var startButton = document.getElementById("start");
-//var startButtonClass = document.getElementsByClass("btn btn-success");
-var imageElements = document.getElementById("image");
-// var stopButton =document.getElementsByID("stop");
 
+var imageElements = document.getElementsByTagName('img');
+
+var clickCount = 0;           //Keeps score of clicks
 
 //Timer Variables
-var secondsCount;
-var timerInterval;
-var randomTime;
+var secondsCount = 20;        //Timer for Countdown
 
-function addSeconds () {    //Counter "addSeconds"
-  secondsCount++;
+var timeElapsed =0;      
+
+var gameOver = "Time is up!"; //Display this message when game is done
+
+
+function countSeconds () {    
+  secondsCount--;     //Counter "secondsCount"
+ 
 }; //End of function
 
 
-//Timer Button with Start and Stop
-function timer (){
-  if( this.getAttribute("data-state") === "start"){
-    alert("Starting Timer NOW!");
-  } else if (this.getAttribute("data-state") === "stop") {
-    alert("Stopping Timer NOW")
-  }; // End of if statement
-}; // End of function
-
-
-function counter (){
+function clickCounter(){
   clickCount++;
-}; 
-
-
-function clicker () {
-  for (var i = 0; i < imageElements.length; i++) {
-    clickCount++;
-    alert("Clicked!");
- }
+  alert("Clicked!");
 };
 
+for (var i = 0; i < imageElements.length; i++) {
+  imageElements.addEventListener("click", function(){
+    clickCount++;
+    alert("Clicked!");
+  });
+};  
 
+
+/*
 function gameStart () { 
-alert("Start!");
+  alert("Start!");
+
+  //Timer Button with Start and Stop
+  
+    if(this.getAttribute("data-state") === "start"){
+      alert("Starting Timer NOW!");
+      this.innerHTML = "Stop";
+      this.setAttribute("class", "btn btn-danger");
+      this.setAttribute("data-state","stop");
+      timerCountdown = setInterval( countSeconds,1000);                            //time with setInterval of 1000 to countdown
+
+    } else if (this.getAttribute("data-state") === "stop") {
+      alert("Stopping Timer NOW");
+      this.innerHTML = "Start";
+      this.setAttribute("class", "btn btn-success" );
+      this.setAttribute("data-state","start");
+    }; // End of if statement
 };
 
 // function gameStop (){
@@ -48,14 +58,16 @@ alert("Start!");
 
 // };
 
-
-
+*/
 
 
 
 //Add event Listener for start button
 //startButton.addEventListener("click", timer);
-startButton.addEventListener("click", gameStart);
+
+//startButton.addEventListener("click", gameStart);
 //Add event listener for clicker
-//imageElements.addEventListener("click", counter);
-//
+
+/*if (secondCount === 0){
+    setTimeout (function () {alert("Time is up! You scored " + clickCount + "points!")}, 1000)
+} */
