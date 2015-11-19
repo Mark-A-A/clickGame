@@ -1,17 +1,21 @@
-/*
-.pic {
-  width: 200px;
-  height: 200px;
 
-}
 
 .table-striped {
 
-}*/
+}
 
 
 body {
   background-image: url("pictures/LA-football-stadium-plan-gets-boost-9FE4O9S-x-large.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+}
+
+h1 {
+  color: white;
+  outline: black;
 }
 
 #image {
